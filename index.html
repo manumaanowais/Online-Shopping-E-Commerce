@@ -1,0 +1,856 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Shopping-Web Numaan</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family:'poppins',sans-serif;
+            }
+            #header{
+                width:1340px;
+                height:100px;
+                background:#001660;
+            }
+            .navbar{
+	            display:flex;
+	            align-items:center;
+	            padding:20px;
+             }
+            nav{
+                flex:1;
+	            text-align:right;
+            }
+            nav ul{
+	            display:inline-block;
+	            list-style-type:none;
+            }
+            nav ul li{
+	            display:inline-block;
+	            margin-right:20px;
+            }
+            a{
+            	text-decoration:none;
+            	color:white;
+            }
+            .logo{
+            	padding-left:25px;
+            	padding-right:25px;
+            	margin-top:10px;
+            }
+            .header-container{
+            	padding-left:25px;
+            	padding-right:25px;
+            	max-width:1300px;
+            	margin:auto;
+            }
+            
+            
+            .image-container{
+                //border:1px solid black;
+                width:1200px;
+                margin-left:120px;
+            }
+            .image{
+                border:1px solid black;
+                width:200px;
+                height:300px;
+                margin-top:25px;
+            }
+            .price{
+                color:darkgreen;
+                font-size:20px;
+                margin:10px;
+                margin-left:15px;
+            }
+            .btns{
+                margin:15px;
+                font-size:20px;
+                width:170px;
+                height: 35px;
+                background-color:orange;
+                color:white;
+            }
+            #image1{
+                margin-left:10px;
+            }
+            #image2{
+                margin-left:230px;
+                margin-top:-300px;
+            }
+            #image3{
+                margin-left:450px;
+                margin-top:-300px;
+            }
+            #image4{
+                margin-left:670px;
+                margin-top:-300px;
+            }
+            #image5{
+                margin-left:890px;
+                margin-top:-300px;
+            }
+            #image6{
+                margin-left:10px;
+            }
+            #image7{
+                margin-left:230px;
+                margin-top:-300px;
+            }
+            #image8{
+                margin-left:450px;
+                margin-top:-300px;
+            }
+            #image9{
+                margin-left:670px;
+                margin-top:-300px;
+            }
+            #image10{
+                margin-left:890px;
+                margin-top:-300px;
+            }
+            #image11{
+                margin-left:10px;
+            }
+            #image12{
+                margin-left:230px;
+                margin-top:-300px;
+            }
+            #image13{
+                margin-left:450px;
+                margin-top:-300px;
+            }
+            #image14{
+                margin-left:670px;
+                margin-top:-300px;
+            }
+            #image15{
+                margin-left:890px;
+                margin-top:-300px;
+            }
+            .image{
+                border-radius:5px;
+            }
+            .img{
+                width:150px;
+                height: 140px;
+                margin:25px;
+                border-radius:5px;
+            }
+            .btns{
+                font-size:20px;
+                text-align:center;
+                cursor:pointer;
+                outline:none;
+                color:#fff;
+                background-color:#ff523b;
+                border:none;
+                border-radius:15px;
+                margin-bottom:20px;
+            }
+            .btns:hover{
+                font-size:22px;
+                color:#ff523b;
+                background-color:#fff;
+                border:1px solid orange;
+            }
+            
+
+            .container{
+               width:1340px;
+               height:320%;
+               background:#001660;
+               display:flex;
+               align-items:center;
+               justify-content:center;
+               margin-top:100px;
+            }
+            form{
+                background:#fff;
+                display:flex;
+                flex-direction:column;
+                padding:2vw 4vw;
+                width:90%;
+                max-width:600px;
+                border-radius:10px;
+            }
+            form h3{
+                color:#555;
+                font-weight:800;
+                margin-bottom:20px;
+                text-align:center;
+            }
+            form input,form label,form textarea,form select{
+                border:0;
+                margin:10px 0;
+                padding:20px;
+                outline:none;
+                background:#f5f5f5;
+                font-size:16px;
+            }
+            form a{
+                text-decoration:none;
+                font-size:15px;
+                text-align:center;
+                border-radius:10px;
+                width:110px;
+                font-weight:bold;
+                background-color:darkgreen;
+                color:white;
+            }
+            form a:hover{
+                font-size:16px;
+            }
+            form button{
+                padding:15px;
+                background:#ff5361;
+                color:#fff;
+                font-size:18px;
+                border:0;
+                outline:none;
+                cursor:pointer;
+                width:150px;
+                margin:20px auto 0;
+                border-radius:30px;
+            }
+            form button:hover{
+                font-size:20;
+                color:#ff5361;
+                background-color:#fff;
+                border:1px solid #ff5361;
+            }
+            #totalprice{
+                border-radius:10px;
+                border:1px solid black;
+                padding:10px;
+            }
+            #mainimage{
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                border-radius:5px;
+                width:50%;
+            }
+            
+            .footer{
+            	background:#000;
+            	color:#8a8a8a;
+            	font-size:14px;
+            	padding:20px 0 20px;
+            	margin-top:-300px;
+            	width:1250px;
+            	border-radius:15px;
+            	display:flex;
+                align-items:center;
+                justify-content:center;
+                margin-left:50px;
+            }
+            .footer p{
+            	color:#8a8a8a;
+            }.footer h3{
+            	color:#fff;
+            	margin-bottom:20px;
+            }
+            .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+            	min-width:180px;
+            	margin-bottom:20px;
+            }
+            .footer-col-1{
+            	flex-basis:30%;
+            }
+            .footer-col-2{
+            	flex:1;
+            	text-align:center;
+            }
+            .footer-col-2 img{
+            	width:180px;
+            	margin-bottom:20px;
+            }
+            .footer-col-3, .footer-col-4{
+            	flex-basis:12%;
+            	text-align:center;
+            }
+            ul{
+            	list-style-type:none;
+            }
+            .app-logo{
+            	margin-top:20px;
+            }
+            .app-logo img{
+            	width:140px;
+            }
+            .footer hr{
+            	border:none;
+            	background:#b5b5b5;
+            	height:1px;
+            	margin:20px 0;
+            }
+            .footer-container{
+            	padding-left:25px;
+            	padding-right:25px;
+            	max-width:1340px;
+            	margin:auto;
+            }
+            .row{
+            	display:flex;
+            	align-items:center;
+            	flex-wrap:wrap;
+            	justify-content:space-around;
+            }
+            .copyright{
+            	text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="header-container">
+				<div class="navbar">
+					<div class="logo">
+						<img src="Images/numaanlogo1.png" width="100px">
+					</div>
+				    <nav>
+					    <ul id="MenuItems">
+						    <li><a href="index.html">Home</a></li>
+						    <li><a href="#">Products</a></li>
+						    <li><a href="#">About</a></li>
+						    <li><a href="#">Contact</a></li>
+						    <li><a href="#">Account</a></li>
+					    </ul>
+				    </nav>
+				</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="image" id="image1">
+                <img id="img1" class="img" src="Images/product-1.jpg" />
+                <p class="price">Price : <b id="price1" class="price">300.00</b></p>
+                <button id="btn1" class="btns" onclick="order1()">Order Now</button>
+            </div>
+            <div class="image" id="image2">
+                <img id="img2" class="img" src="Images/product-2.jpg" />
+                <p class="price">Price : <b id="price2" class="price">599.00</b></p>
+                <button id="btn2" class="btns" onclick="order2()">Order Now</button>
+            </div>
+            <div class="image" id="image3">
+                <img id="img3" class="img" src="Images/product-3.jpg" />
+                <p class="price">Price : <b id="price3" class="price">499.00</b></p>
+                <button id="btn3" class="btns" onclick="order3()">Order Now</button>
+            </div>
+            <div class="image" id="image4">
+                <img id="img4" class="img" src="Images/product-4.jpg" />
+                <p class="price">Price : <b id="price4" class="price">566.00</b></p>
+                <button id="btn4" class="btns" onclick="order4()">Order Now</button>
+            </div>
+            <div class="image" id="image5">
+                <img id="img5" class="img" src="Images/product-5.jpg" />
+                <p class="price">Price : <b id="price5" class="price">350.00</b></p>
+                <button id="btn5" class="btns" onclick="order5()">Order Now</button>
+            </div>
+            <div class="image" id="image6">
+                <img id="img6" class="img" src="Images/product-6.jpg" />
+                <p class="price">Price : <b id="price6" class="price">1059.00</b></p>
+                <button id="btn6" class="btns" onclick="order6()">Order Now</button>
+            </div>
+            <div class="image" id="image7">
+                <img id="img7" class="img" src="Images/product-7.jpg" />
+                <p class="price">Price : <b id="price7" class="price">250.00</b></p>
+                <button id="btn7" class="btns" onclick="order7()">Order Now</button>
+            </div>
+            <div class="image" id="image8">
+                <img id="img8" class="img" src="Images/product-8.jpg" />
+                <p class="price">Price : <b id="price8" class="price">980.00</b></p>
+                <button id="btn8" class="btns" onclick="order8()">Order Now</button>
+            </div>
+            <div class="image" id="image9">
+                <img id="img9" class="img" src="Images/product-9.jpg" />
+                <p class="price">Price : <b id="price9" class="price">750.00</b></p>
+                <button id="btn9" class="btns" onclick="order9()">Order Now</button>
+            </div>
+            <div class="image" id="image10">
+                <img id="img10" class="img" src="Images/product-10.jpg" />
+                <p class="price">Price : <b id="price10" class="price">650.00</b></p>
+                <button id="btn10" class="btns" onclick="order10()">Order Now</button>
+            </div>
+            <div class="image" id="image11">
+                <img id="img11" class="img" src="Images/product-11.jpg" />
+                <p class="price">Price : <b id="price11" class="price">999.00</b></p>
+                <button id="btn11" class="btns" onclick="order11()">Order Now</button>
+            </div>
+            <div class="image" id="image12">
+                <img id="img12" class="img" src="Images/product-12.jpg" />
+                <p class="price">Price : <b id="price12" class="price">345.00</b></p>
+                <button id="btn12" class="btns" onclick="order12()">Order Now</button>
+            </div>
+            <div class="image" id="image13">
+                <img id="img13" class="img" src="Images/product-13.jpg" />
+                <p class="price">Price : <b id="price13" class="price">500.00</b></p>
+                <button id="btn13" class="btns" onclick="order13()">Order Now</button>
+            </div>
+            <div class="image" id="image14">
+                <img id="img14" class="img" src="Images/product-14.jpg" />
+                <p class="price">Price : <b id="price14" class="price">455.00</b></p>
+                <button id="btn14" class="btns" onclick="order14()">Order Now</button>
+            </div>
+            <div class="image" id="image15">
+                <img id="img15" class="img" src="Images/product-15.jpg" />
+                <p class="price">Price : <b id="price15" class="price">1240.00</b></p>
+                <button id="btn15" class="btns" onclick="order15()">Order Now</button>
+            </div>
+        </div>
+        <br><br>
+        <hr>
+
+        <div class="container">
+            <form id="form1" onsubmit="sendEmail(); sendEmail1(); reset(); return false;">
+                <h3>Fill In Your Details</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Id" required>
+                <a href="#" id="sendotp" onclick="sendOTP()">Send OTP</a>
+                <input type="text" id="otp" placeholder="Enter OTP" required>
+                <a href="#" id="validateotp" onclick="validateOTP()">Validate OTP</a>
+                <input type="text" id="phone" placeholder="Phone no." required>
+                <textarea id="address" rows="4" placeholder="Address"></textarea>
+                <select id="size" name="sizes">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XXXL">XXXL</option>
+                </select>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                <div id="totalprice">
+                    <b>
+                        <p id="pr" style="margin:0; display:inline;">Price :<p id="price" style="margin:0; display:inline; float:right">0.00</p></p>
+                        <p id="di" style="margin:0; display:inline;">Discount :<p id="discount" style="margin:0; display:inline; float:right">0.00</p></p><hr>
+                        <p id="to" style="margin:0; display:inline;">Total :<p id="total" style="margin:0; display:inline; float:right">0.00</p></p>
+                    </b>
+                </div><br>
+                <img id="mainimage" src="Images/product-1.jpg" />
+                <select id="money" name="cash">
+                    <option value="Cash On Delivery">Cash On Delivery</option>
+                    <option value="Net Banking">Net Banking</option>
+                    <option value="UPI">UPI</option>
+                </select>
+                <button id="submitbtn" type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="footer">
+			<div class="footer-container">
+				<div class="row">
+					<div class="footer-col-1">
+						<h3>Download Our App</h3>
+						<p>Download App for Android and ios mobile phone.</P>
+						<div class="app-logo">
+							<img src="Images/play-store.png">
+							<img src="Images/app-store.png">
+						</div>
+					</div>
+					<div class="footer-col-2">
+						<img src="Images/numaanlogo2.png">
+						<p>Our Purpose Is To Sustainabily Make the Pleasure and Benefits of Sports Accessible to the Many.</P>
+					</div>
+					<div class="footer-col-3">
+						<h3>Useful Links</h3>
+						<ul>
+							<li>Coupons</li>
+							<li>Blog Post</li>
+							<li>Return Policy</li>
+							<li>Join Affiliate</li>
+						</ul>
+					</div>
+					<div class="footer-col-4">
+						<h3>Follow us</h3>
+						<ul>
+							<li>Facebook</li>
+							<li>Twitter</li>
+							<li>Instagram</li>
+							<li>Youtube</li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<p class="copyright">Copyright &#169; 2022 - Web Numaan</p>
+			</div>
+		</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        
+        <script>
+            
+            document.getElementById("submitbtn").disabled = true;
+            document.getElementById("validateotp").style.cursor = "not-allowed";
+             
+            function order1(){
+                var quantity1;
+                var discount1 = 50;
+                document.getElementById("price").innerHTML = document.getElementById("price1").innerHTML;
+                document.getElementById("discount").innerHTML = discount1;
+                document.getElementById("total").innerHTML = document.getElementById("price1").innerHTML - discount1;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity1 = document.getElementById("quantity").value;
+                    discount1 = 50 * quantity1;
+                    document.getElementById("price").innerHTML = document.getElementById("price1").innerHTML * quantity1;
+                    document.getElementById("discount").innerHTML = discount1;
+                    document.getElementById("total").innerHTML = document.getElementById("price1").innerHTML * quantity1 - discount1;
+                });
+                var tshirt1 = document.getElementById("img1").src;
+                document.getElementById("mainimage").src = tshirt1;
+                location.href="#form1";
+            }
+            function order2(){
+                var quantity2;
+                var discount2 = 49;
+                document.getElementById("price").innerHTML = document.getElementById("price2").innerHTML;
+                document.getElementById("discount").innerHTML = discount2;
+                document.getElementById("total").innerHTML = document.getElementById("price2").innerHTML - discount2;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity2 = document.getElementById("quantity").value;
+                    discount2 = 49 * quantity2;
+                    document.getElementById("price").innerHTML = document.getElementById("price2").innerHTML * quantity2;
+                    document.getElementById("discount").innerHTML = discount2;
+                    document.getElementById("total").innerHTML = document.getElementById("price2").innerHTML * quantity2 - discount2;
+                });
+                var tshirt2 = document.getElementById("img2").src;
+                document.getElementById("mainimage").src = tshirt2;
+                location.href="#form1";
+            }
+            function order3(){
+                var quantity3;
+                var discount3 = 29;
+                document.getElementById("price").innerHTML = document.getElementById("price3").innerHTML;
+                document.getElementById("discount").innerHTML = discount3;
+                document.getElementById("total").innerHTML = document.getElementById("price3").innerHTML - discount3;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity3 = document.getElementById("quantity").value;
+                    discount3 = 29 * quantity3;
+                    document.getElementById("price").innerHTML = document.getElementById("price3").innerHTML * quantity3;
+                    document.getElementById("discount").innerHTML = discount3;
+                    document.getElementById("total").innerHTML = document.getElementById("price3").innerHTML * quantity3 - discount3;
+                });
+                var tshirt3 = document.getElementById("img3").src;
+                document.getElementById("mainimage").src = tshirt3;
+                location.href="#form1";
+            }
+            function order4(){
+                var quantity4;
+                var discount4 = 66;
+                document.getElementById("price").innerHTML = document.getElementById("price4").innerHTML;
+                document.getElementById("discount").innerHTML = discount4;
+                document.getElementById("total").innerHTML = document.getElementById("price4").innerHTML - discount4;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity4 = document.getElementById("quantity").value;
+                    discount4 = 66 * quantity4;
+                    document.getElementById("price").innerHTML = document.getElementById("price4").innerHTML * quantity4;
+                    document.getElementById("discount").innerHTML = discount4;
+                    document.getElementById("total").innerHTML = document.getElementById("price4").innerHTML * quantity4 - discount4;
+                });
+                var tshirt4 = document.getElementById("img4").src;
+                document.getElementById("mainimage").src = tshirt4;
+                location.href="#form1";
+            }
+            function order5(){
+                var quantity5;
+                var discount5 = 51;
+                document.getElementById("price").innerHTML = document.getElementById("price5").innerHTML;
+                document.getElementById("discount").innerHTML = discount5;
+                document.getElementById("total").innerHTML = document.getElementById("price5").innerHTML - discount5;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity5 = document.getElementById("quantity").value;
+                    discount5 = 51 * quantity5;
+                    document.getElementById("price").innerHTML = document.getElementById("price5").innerHTML * quantity5;
+                    document.getElementById("discount").innerHTML = discount5;
+                    document.getElementById("total").innerHTML = document.getElementById("price5").innerHTML * quantity5 - discount5;
+                });
+                var tshirt5 = document.getElementById("img5").src;
+                document.getElementById("mainimage").src = tshirt5;
+                location.href="#form1";
+            }
+            function order6(){
+                var quantity6;
+                var discount6 = 60;
+                document.getElementById("price").innerHTML = document.getElementById("price6").innerHTML;
+                document.getElementById("discount").innerHTML = discount6;
+                document.getElementById("total").innerHTML = document.getElementById("price6").innerHTML - discount6;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity6 = document.getElementById("quantity").value;
+                    discount6 = 60 * quantity6;
+                    document.getElementById("price").innerHTML = document.getElementById("price6").innerHTML * quantity6;
+                    document.getElementById("discount").innerHTML = discount6;
+                    document.getElementById("total").innerHTML = document.getElementById("price6").innerHTML * quantity6 - discount6;
+                });
+                var tshirt6 = document.getElementById("img6").src;
+                document.getElementById("mainimage").src = tshirt6;
+                location.href="#form1";
+            }
+            function order7(){
+                var quantity7;
+                var discount7 = 51;
+                document.getElementById("price").innerHTML = document.getElementById("price7").innerHTML;
+                document.getElementById("discount").innerHTML = discount7;
+                document.getElementById("total").innerHTML = document.getElementById("price7").innerHTML - discount7;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity7 = document.getElementById("quantity").value;
+                    discount7 = 51 * quantity7;
+                    document.getElementById("price").innerHTML = document.getElementById("price7").innerHTML * quantity7;
+                    document.getElementById("discount").innerHTML = discount7;
+                    document.getElementById("total").innerHTML = document.getElementById("price7").innerHTML * quantity7 - discount7;
+                });
+                var tshirt7 = document.getElementById("img7").src;
+                document.getElementById("mainimage").src = tshirt7;
+                location.href="#form1";
+            }
+            function order8(){
+                var quantity8;
+                var discount8 = 40;
+                document.getElementById("price").innerHTML = document.getElementById("price8").innerHTML;
+                document.getElementById("discount").innerHTML = discount8;
+                document.getElementById("total").innerHTML = document.getElementById("price8").innerHTML - discount8;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity8 = document.getElementById("quantity").value;
+                    discount8 = 40 * quantity8;
+                    document.getElementById("price").innerHTML = document.getElementById("price8").innerHTML * quantity8;
+                    document.getElementById("discount").innerHTML = discount8;
+                    document.getElementById("total").innerHTML = document.getElementById("price8").innerHTML * quantity8 - discount8;
+                });
+                var tshirt8 = document.getElementById("img8").src;
+                document.getElementById("mainimage").src = tshirt8;
+                location.href="#form1";
+            }
+            function order9(){
+                var quantity9;
+                var discount9 = 51;
+                document.getElementById("price").innerHTML = document.getElementById("price9").innerHTML;
+                document.getElementById("discount").innerHTML = discount9;
+                document.getElementById("total").innerHTML = document.getElementById("price9").innerHTML - discount9;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity9 = document.getElementById("quantity").value;
+                    discount9 = 51 * quantity9;
+                    document.getElementById("price").innerHTML = document.getElementById("price9").innerHTML * quantity9;
+                    document.getElementById("discount").innerHTML = discount9;
+                    document.getElementById("total").innerHTML = document.getElementById("price9").innerHTML * quantity9 - discount9;
+                });
+                var tshirt9 = document.getElementById("img9").src;
+                document.getElementById("mainimage").src = tshirt9;
+                location.href="#form1";
+            }
+            function order10(){
+                var quantity10;
+                var discount10 = 51;
+                document.getElementById("price").innerHTML = document.getElementById("price10").innerHTML;
+                document.getElementById("discount").innerHTML = discount10;
+                document.getElementById("total").innerHTML = document.getElementById("price10").innerHTML - discount10;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity10 = document.getElementById("quantity").value;
+                    discount10 = 51 * quantity10;
+                    document.getElementById("price").innerHTML = document.getElementById("price10").innerHTML * quantity10;
+                    document.getElementById("discount").innerHTML = discount10;
+                    document.getElementById("total").innerHTML = document.getElementById("price10").innerHTML * quantity10 - discount10;
+                });
+                var tshirt10 = document.getElementById("img10").src;
+                document.getElementById("mainimage").src = tshirt10;
+                location.href="#form1";
+            }
+            function order11(){
+                var quantity11;
+                var discount11 = 100;
+                document.getElementById("price").innerHTML = document.getElementById("price11").innerHTML;
+                document.getElementById("discount").innerHTML = discount11;
+                document.getElementById("total").innerHTML = document.getElementById("price11").innerHTML - discount11;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity11 = document.getElementById("quantity").value;
+                    discount11 = 100 * quantity11;
+                    document.getElementById("price").innerHTML = document.getElementById("price11").innerHTML * quantity11;
+                    document.getElementById("discount").innerHTML = discount11;
+                    document.getElementById("total").innerHTML = document.getElementById("price11").innerHTML * quantity11 - discount11;
+                });
+                var tshirt11 = document.getElementById("img11").src;
+                document.getElementById("mainimage").src = tshirt11;
+                location.href="#form1";
+            }
+            function order12(){
+                var quantity12;
+                var discount12 = 46;
+                document.getElementById("price").innerHTML = document.getElementById("price12").innerHTML;
+                document.getElementById("discount").innerHTML = discount12;
+                document.getElementById("total").innerHTML = document.getElementById("price12").innerHTML - discount12;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity12 = document.getElementById("quantity").value;
+                    discount12 = 46 * quantity12;
+                    document.getElementById("price").innerHTML = document.getElementById("price12").innerHTML * quantity12;
+                    document.getElementById("discount").innerHTML = discount12;
+                    document.getElementById("total").innerHTML = document.getElementById("price12").innerHTML * quantity12 - discount12;
+                });
+                var tshirt12 = document.getElementById("img12").src;
+                document.getElementById("mainimage").src = tshirt12;
+                location.href="#form1";
+            }
+            function order13(){
+                var quantity13;
+                var discount13 = 1;
+                document.getElementById("price").innerHTML = document.getElementById("price13").innerHTML;
+                document.getElementById("discount").innerHTML = discount13;
+                document.getElementById("total").innerHTML = document.getElementById("price13").innerHTML - discount13;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity13 = document.getElementById("quantity").value;
+                    discount13 = 1 * quantity13;
+                    document.getElementById("price").innerHTML = document.getElementById("price13").innerHTML * quantity13;
+                    document.getElementById("discount").innerHTML = discount13;
+                    document.getElementById("total").innerHTML = document.getElementById("price13").innerHTML * quantity13 - discount13;
+                });
+                var tshirt13 = document.getElementById("img13").src;
+                document.getElementById("mainimage").src = tshirt13;
+                location.href="#form1";
+            }
+            function order14(){
+                var quantity14;
+                var discount14 = 45;
+                document.getElementById("price").innerHTML = document.getElementById("price14").innerHTML;
+                document.getElementById("discount").innerHTML = discount14;
+                document.getElementById("total").innerHTML = document.getElementById("price14").innerHTML - discount14;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity14 = document.getElementById("quantity").value;
+                    discount14 = 45 * quantity14;
+                    document.getElementById("price").innerHTML = document.getElementById("price14").innerHTML * quantity14;
+                    document.getElementById("discount").innerHTML = discount14;
+                    document.getElementById("total").innerHTML = document.getElementById("price14").innerHTML * quantity14 - discount14;
+                });
+                var tshirt14 = document.getElementById("img14").src;
+                document.getElementById("mainimage").src = tshirt14;
+                location.href="#form1";
+            }
+            function order15(){
+                var quantity15;
+                var discount15 = 41;
+                document.getElementById("price").innerHTML = document.getElementById("price15").innerHTML;
+                document.getElementById("discount").innerHTML = discount15;
+                document.getElementById("total").innerHTML = document.getElementById("price15").innerHTML - discount15;
+                $("#quantity").bind('keyup mouseup', function(){
+                    quantity15 = document.getElementById("quantity").value;
+                    discount15 = 41 * quantity15;
+                    document.getElementById("price").innerHTML = document.getElementById("price15").innerHTML * quantity15;
+                    document.getElementById("discount").innerHTML = discount15;
+                    document.getElementById("total").innerHTML = document.getElementById("price15").innerHTML * quantity15 - discount15;
+                });
+                var tshirt15 = document.getElementById("img15").src;
+                document.getElementById("mainimage").src = tshirt15;
+                location.href="#form1";
+            }
+
+        </script>
+
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+        
+          function sendEmail()
+          {
+              var y = document.getElementById("mainimage").src;
+              var x = y.replace(/^.*[\\\/]/, '');
+          
+              Email.send({
+                  SecureToken : "8ee728d5-0750-4e96-9095-8fa4a4de44a5",
+                  To : 'numaanbusiness@gmail.com',
+                  From : 'manumaanowais809@gmail.com',
+                  ReplyTo : document.getElementById("email").value,
+                  Subject : "NEW ORDER RECIEVED",
+                  Body :"<br> <b>Name            : </b>" + document.getElementById("name").value
+                      + "<br> <b>Email           : </b>" + document.getElementById("email").value
+                      + "<br> <b>Phone No        : </b>" + document.getElementById("phone").value
+                      + "<br> <b>Address         : </b>" + document.getElementById("address").value
+                      + "<br> <b>Size            : </b>" + document.getElementById("size").value
+                      + "<br> <b>Quantity        : </b>" + document.getElementById("quantity").value
+                      + "<br> <b>Mode Of Payment : </b>" + document.getElementById("money").value
+                      + "<br> <b>Total Price     : </b>" + document.getElementById("price").innerHTML
+                      + "<br> <b>Total Discount  : </b>" + document.getElementById("discount").innerHTML
+                      + "<br> <b>Total Payable   : </b>" + document.getElementById("total").innerHTML,
+                  Attachments : [
+                      {
+                          name : x,
+                          path : y
+                      }]
+                  }).then(
+                  message => alert("Congratulations! Order Placed Successfully")
+              );
+          }
+          
+          function sendEmail1()
+          {
+              var y = document.getElementById("mainimage").src;
+              var x = y.replace(/^.*[\\\/]/, '');
+          
+              Email.send({
+                  SecureToken : "8ee728d5-0750-4e96-9095-8fa4a4de44a5",
+                  To : document.getElementById("email").value,
+                  From : 'manumaanowais809@gmail.com',
+                  ReplyTo : 'manumaanowais809@gmail.com',
+                  Subject : "Order Placed Successfully",
+                  Body : "<br> Congratulations! "+ document.getElementById("name").value+ ".<br>Your order is placed successfully, your order will be delivered to the provided address with in 7 working days.<br> Your details are as shown below : <br>"
+                      + "<br> <b>Name            : </b>" + document.getElementById("name").value
+                      + "<br> <b>Email           : </b>" + document.getElementById("email").value
+                      + "<br> <b>Phone No        : </b>" + document.getElementById("phone").value
+                      + "<br> <b>Address         : </b>" + document.getElementById("address").value
+                      + "<br> <b>Size            : </b>" + document.getElementById("size").value
+                      + "<br> <b>Quantity        : </b>" + document.getElementById("quantity").value
+                      + "<br> <b>Mode Of Payment : </b>" + document.getElementById("money").value
+                      + "<br> <b>Total Price     : </b>" + document.getElementById("price").innerHTML
+                      + "<br> <b>Total Discount  : </b>" + document.getElementById("discount").innerHTML
+                      + "<br> <b>Total Payable   : </b>" + document.getElementById("total").innerHTML,
+                  Attachments : [
+                      {
+                          name : x,
+                          path : y
+                      }]
+                  }).then(
+                  message => alert("Continue Shopping With Us! Have a nice day")
+              );
+          }
+          
+          
+          var randNumb = 0;
+          function sendOTP()
+          {
+             randNumb = Math.floor(Math.random() * (9999 - 1000 + 1) + 1000);
+             if(document.getElementById("email").value != 0 || document.getElementById("email").value != "")
+             { 
+                 Email.send({
+                    SecureToken : "8ee728d5-0750-4e96-9095-8fa4a4de44a5",
+                    To : document.getElementById("email").value,
+                    From : 'manumaanowais809@gmail.com',
+                    ReplyTo : 'manumaanowais809@gmail.com',
+                    Subject : "OTP For Email Validation",
+                    Body : "<br><b>Your One Time Password for verifying your email is : </b>"
+                    + randNumb,
+                  }).then(
+                    message => alert("OTP sent to " + document.getElementById("email").value)
+                );
+                
+                document.getElementById("validateotp").style.cursor = "pointer";
+             }
+             else
+             {
+                 alert("Email cannot be empty");
+             }
+          }
+          
+          function validateOTP()
+          {
+              var otp = document.getElementById("otp").value;
+              if(randNumb == otp)
+              {
+                  alert("Email is verified");
+                  document.getElementById("submitbtn").disabled = false;
+              }
+              else
+              {
+                  alert("Invalid OTP");
+              }
+          }
+          
+        </script>
+
+    </body>
+</html>
